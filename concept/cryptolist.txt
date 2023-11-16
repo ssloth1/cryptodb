@@ -1,0 +1,8 @@
+    ('tether', 'USDT'),
+    ('tron', 'TRX'),
+    ('polkadot', 'DOT'),
+    ('avalanche-2', 'AVAX'),
+    ('litecoin', 'LTC'),
+    ('the-open-network', 'TON'),
+    ('bitcoin-cash', 'BCH'),
+    ('uniswap', 'UNI'),
