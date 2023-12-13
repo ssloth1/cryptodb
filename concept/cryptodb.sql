@@ -57,8 +57,6 @@ CREATE TABLE Specification
 ( 
   specificationID INT NOT NULL,
   cryptocurrencyID INT NOT NULL,
-  ALGORITHM VARCHAR(255),
-  main_use_case VARCHAR(255),
   total_supply DECIMAL(65, 2),
   max_supply DECIMAL(65, 2),
   last_update DATE,

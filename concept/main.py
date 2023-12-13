@@ -21,7 +21,7 @@ crypto = [
     ('avalanche-2', 'AVAX'),
     ('tron', 'TRX'),
     ('polkadot', 'DOT'),
-    ('uniswap', 'UNI'),
+    ('eos', 'EOS'),
     ('bitcoin-cash', 'BCH'),
     ('monero', 'XMR'),
     ('ethereum-classic', 'ETC'),
