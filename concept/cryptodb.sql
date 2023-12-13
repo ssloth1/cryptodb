@@ -1,11 +1,13 @@
+CREATE DATABASE CryptoDatabase;
+USE CryptoDatabase;
+
 CREATE TABLE Blockchain
 (
   blockchainID INT NOT NULL,
   BuiltOn_blockchainID INT,
   name VARCHAR(255) NOT NULL,
   launch_date DATE NOT NULL,
-  block_time INT,
-  security_protocol VARCHAR(255),
+  block_time FLOAT,
   consensus_mechanism VARCHAR(255) NOT NULL,
   fork_date DATE,
   fork_type VARCHAR(255),
@@ -55,8 +57,8 @@ CREATE TABLE Specification
   specificationID INT NOT NULL,
   cryptocurrencyID INT NOT NULL,
   algorithm VARCHAR(255),
-  total_supply INT,
-  max_supply INT,
+  total_supply DECIMAL(65, 2),
+  max_supply DECIMAL(65, 2),
   last_update DATE,
   PRIMARY KEY (specificationID),
   FOREIGN KEY (cryptocurrencyID) REFERENCES Cryptocurrency(cryptocurrencyID)
@@ -91,10 +93,4 @@ CREATE TABLE Cryptocurrency_founder
   founder VARCHAR(255) NOT NULL,
   PRIMARY KEY (founder, cryptocurrencyID),
   FOREIGN KEY (cryptocurrencyID) REFERENCES Cryptocurrency(cryptocurrencyID)
-);
-
-CREATE TABLE Regulatory
-(
-  country VARCHAR(255) NOT NULL,
-  legal_status VARCHAR(255) NOT NULL
 );
