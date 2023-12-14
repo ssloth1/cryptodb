@@ -36,12 +36,18 @@ crypto = [
     ('near', 'NEAR'),
     ('vechain', 'VET'),
     ('bitcoin-cash-sv', 'BSV'),
-    ('ravencoin', 'RVN')
+    ('ravencoin', 'RVN'),
+    ('pepe', 'PEPE'),
+    ('injective-protocol', 'INJ'),
+    ('optimism', 'OP')
 ]
 
 def main():
     try:
-        connection = mysql.connector.connect(host='localhost', database='cryptodatabase', user='root', password='4341')
+        connection = mysql.connector.connect(host='localhost', 
+                                             database='cryptodatabase', 
+                                             user='root', 
+                                             password='4341')
 
         if connection.is_connected():
             print("Connected to crypto database.")

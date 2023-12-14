@@ -31,6 +31,7 @@ CREATE TABLE Exchange
 ( 
   exchangeID INT NOT NULL,
   name VARCHAR(255) NOT NULL,
+  website VARCHAR(255) NOT NULL,
   fee_structure VARCHAR(255),
   location VARCHAR(255) NOT NULL,
   launch_date DATE NOT NULL,
@@ -55,12 +56,12 @@ CREATE TABLE Market
   
 CREATE TABLE Specification
 ( 
-  specificationID INT NOT NULL,
   cryptocurrencyID INT NOT NULL,
+  use_case VARCHAR(255) NOT NULL,
   total_supply DECIMAL(65, 2),
   max_supply DECIMAL(65, 2),
   last_update DATE,
-  PRIMARY KEY (specificationID),
+  PRIMARY KEY (cryptocurrencyID),
   FOREIGN KEY (cryptocurrencyID) REFERENCES Cryptocurrency(cryptocurrencyID)
 );
   

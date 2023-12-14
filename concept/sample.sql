@@ -10,11 +10,11 @@ VALUES
 (7, 'Cardano', '2017-09-29', 20, 'Proof of Stake', TRUE, NULL, NULL, NULL),
 (8, 'Dogecoin', '2013-12-06', 60, 'Proof of Work', FALSE, '2013-12-06', 'hard', 4),
 (9, 'Chainlink', '2017-09-19', 15, 'Proof of Stake', TRUE, NULL, NULL, 2),
-(10, 'Polygon', '2020-04-26', 2, 'Proof of Stake', TRUE, NULL, NULL, NULL),
+(10, 'Polygon', '2020-04-26', 2, 'Proof of Stake', TRUE, NULL, NULL, 2),
 (11, 'Shiba Inu', '2020-08-01', 5, 'Proof of Stake', TRUE, NULL, NULL, 2),
 (12, 'X-Chain', '2020-09-22', 2.1, 'Avalanche Consensus', TRUE, NULL, NULL, NULL),
 (13, 'Tron Main', '2018-05-31', 3, 'Delegated Proof of Stake', TRUE, NULL, NULL, NULL),
-(14, 'Polkadot', '2020-05-26', 6, 'Nominated Proof-of-Stake', TRUE, NULL, NULL, NULL),
+(14, 'Polkadot', '2020-05-26', 6, 'Nominated Proof of Stake', TRUE, NULL, NULL, NULL),
 (15, 'EOS.IO', '2018-06-01', .5, 'Delegated Proof of Stake', TRUE, NULL, NULL, NULL),
 (16, 'Bitcoin Cash', '2017-08-01', 600, 'Proof of Work', TRUE, '2017-08-01', 'hard', 1),
 (17, 'Monero', '2014-04-18', 120, 'Proof of Work', FALSE, NULL, NULL, NULL),
@@ -23,15 +23,17 @@ VALUES
 (20, 'Kaspa', '2021-11-07', 1, 'Proof of Work', FALSE, NULL, NULL, NULL),
 (21, 'Internet Computer', '2021-05-10', .93, 'Proof of Stake', TRUE, NULL, NULL, NULL),
 (22, 'Stellar', '2014-07-31', 5, 'Stellar Consensus', FALSE, NULL, NULL, NULL),
-(23, 'Algorand', '2019-06-19', 3.3, 'Pure Proof of Stake (PPoS)', TRUE, NULL, NULL, NULL),
+(23, 'Algorand', '2019-06-19', 3.3, 'Pure Proof of Stake', TRUE, NULL, NULL, NULL),
 (24, 'The Open Network', '2020-05-07', 5, 'Proof of Stake', TRUE, NULL, NULL, NULL),
 (25, 'Aptos', '2022-10-22', 4, 'Proof of Stake', TRUE, NULL, NULL, NULL),
 (26, 'Cronos Chain', '2021-11-08', 5, 'Proof of Authority', TRUE, NULL, NULL, NULL),
 (27, 'NEAR Protocol', '2020-04-01', 1, 'Proof of Stake', TRUE, NULL, NULL, NULL),
 (28, 'VeChainThor', '2018-06-30', 10, 'Proof of Authority', TRUE, NULL, NULL, NULL),
 (29, 'Bitcoin SV', '2018-11-15', 600, 'Proof of Work', FALSE, '2018-11-15', 'hard', 16),
-(30, 'Ravencoin', '2018-01-03', 60, 'Proof of Work', FALSE, '2018-01-03', 'hard', 1);
-
+(30, 'Ravencoin', '2018-01-03', 60, 'Proof of Work', FALSE, '2018-01-03', 'hard', 1), 
+(31, 'Pepe Coin', '2023-04-01', 12, 'Proof of Stake', TRUE, NULL, NULL, 2),
+(32, 'Injective', '2020-10-01', .82, 'Proof of Stake', TRUE, NULL, NULL, 19),
+(33, 'Optimism', '2022-11-01', 2, 'Proof of Stake', TRUE, NULL, NULL, 2);
 
 INSERT INTO Cryptocurrency (cryptocurrencyID, name, symbol, launch_date, blockchainID) 
 VALUES 
@@ -64,22 +66,23 @@ VALUES
 (27, 'NEAR Protocol', 'NEAR', '2020-04-01', 27),
 (28, 'VeChain', 'VET', '2018-06-30', 28),
 (29, 'Bitcoin SV', 'BSV', '2018-11-15', 29),
-(30, 'Ravecoin', 'RVN', '2018-01-03', 30);
+(30, 'Ravecoin', 'RVN', '2018-01-03', 30),
+(31, 'Pepe Coin', 'PEPE', '2023-04-01', 31),
+(32, 'Injective', 'INJ', '2020-10-01', 32),
+(33, 'Optimism', 'OP', '2022-11-01', 33);
 
-
-INSERT INTO Exchange (exchangeID, name, fee_structure, location, launch_date, publically_traded) 
+INSERT INTO Exchange (exchangeID, name, website, fee_structure, location, launch_date, publically_traded) 
 VALUES 
-(1, 'Coinbase', 'percentage', 'USA', '2012-06-01', 'Yes'),
-(2, 'Binance', 'percentage', 'Cayman Islands', '2017-06-01', 'No'),
-(3, 'Kraken', 'percentage', 'USA', '2011-07-28', 'No'),
-(4, 'Bitfinex', 'percentage', 'British Virgin Islands', '2012-10-11', 'No'),
-(5, 'Crypto.com', 'percentage', 'Singapore', '2016-06-01', 'No'),
-(6, 'Gemini', 'percentage', 'USA', '2014-06-01', 'No'),
-(7, 'Huobi Global', 'percentage', 'Seychelles', '2013-09-01', 'No'),
-(8, 'KuCoin', 'percentage', 'Seychelles', '2017-09-15', 'No'),
-(9, 'OKX', 'percentage', 'Malta', '2017-01-01', 'No'),
-(10, 'Bitstamp', 'percentage', 'Luxembourg', '2011-08-01', 'No');
-
+(1, 'Coinbase', 'https://www.coinbase.com/', 'percentage', 'United States', '2012-06-01', 'Yes'),
+(2, 'Binance', 'https://www.binance.com/', 'percentage', 'Cayman Islands', '2017-06-01', 'No'),
+(3, 'Kraken', 'https://www.kraken.com/', 'percentage', 'United States', '2011-07-28', 'No'),
+(4, 'Bitfinex', 'https://www.bitfinex.com/', 'percentage', 'British Virgin Islands', '2012-10-11', 'No'),
+(5, 'Crypto.com', 'https://crypto.com/', 'percentage', 'Singapore', '2016-06-01', 'No'),
+(6, 'Gemini', 'https://www.gemini.com/', 'percentage', 'United States', '2014-06-01', 'No'),
+(7, 'Huobi Global', 'https://www.htx.com/', 'percentage', 'Seychelles', '2013-09-01', 'No'),
+(8, 'KuCoin', 'https://www.kucoin.com/', 'percentage', 'Seychelles', '2017-09-15', 'No'),
+(9, 'OKX', 'https://www.okx.com/', 'percentage', 'Malta', '2017-01-01', 'No'),
+(10, 'Bitstamp', 'https://www.bitstamp.net/', 'percentage', 'Luxembourg', '2011-08-01', 'No');
 
 INSERT INTO Market (cryptocurrencyID, price_usd, market_cap, 24hr_volume, 24hr_change, all_time_high, all_time_low, circulating_supply, last_updated)
 VALUES
@@ -112,41 +115,46 @@ VALUES
 (27, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, CURDATE()),
 (28, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, CURDATE()),
 (29, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, CURDATE()),
-(30, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, CURDATE());
+(30, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, CURDATE()),
+(31, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, CURDATE()),
+(32, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, CURDATE()),
+(33, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, CURDATE());
 
-
-INSERT INTO Specification (specificationID, cryptocurrencyID, total_supply, max_supply, last_update) 
+INSERT INTO Specification (cryptocurrencyID, use_case, total_supply, max_supply, last_update) 
 VALUES 
-(1, 1, NULL, NULL, CURDATE()),
-(2, 2, NULL, NULL, CURDATE()),
-(3, 3, NULL, NULL, CURDATE()),
-(4, 4, NULL, NULL, CURDATE()),
-(5, 5, NULL, NULL, CURDATE()),
-(6, 6, NULL, NULL, CURDATE()),
-(7, 7, NULL, NULL, CURDATE()),
-(8, 8, NULL, NULL, CURDATE()),
-(9, 9, NULL, NULL, CURDATE()),
-(10, 10, NULL, NULL, CURDATE()),
-(11, 11, NULL, NULL, CURDATE()),
-(12, 12, NULL, NULL, CURDATE()),
-(13, 13, NULL, NULL, CURDATE()),
-(14, 14, NULL, NULL, CURDATE()),
-(15, 15, NULL, NULL, CURDATE()),
-(16, 16, NULL, NULL, CURDATE()),
-(17, 17, NULL, NULL, CURDATE()),
-(18, 18, NULL, NULL, CURDATE()),
-(19, 19, NULL, NULL, CURDATE()),
-(20, 20, NULL, NULL, CURDATE()),
-(21, 21, NULL, NULL, CURDATE()),
-(22, 22, NULL, NULL, CURDATE()),
-(23, 23, NULL, NULL, CURDATE()),
-(24, 24, NULL, NULL, CURDATE()),
-(25, 25, NULL, NULL, CURDATE()),
-(26, 26, NULL, NULL, CURDATE()),
-(27, 27, NULL, NULL, CURDATE()),
-(28, 28, NULL, NULL, CURDATE()),
-(29, 29, NULL, NULL, CURDATE()),
-(30, 30, NULL, NULL, CURDATE());
+(1, 'digital currency', NULL, NULL, CURDATE()),
+(2, 'smart contracts', NULL, NULL, CURDATE()),
+(3, 'digital payments', NULL, NULL, CURDATE()),
+(4, 'digital currency', NULL, NULL, CURDATE()),
+(5, 'utility', NULL, NULL, CURDATE()),
+(6, 'smart contracts', NULL, NULL, CURDATE()),
+(7, 'smart contracts', NULL, NULL, CURDATE()),
+(8, 'meme and digital currency', NULL, NULL, CURDATE()),
+(9, 'DeFi', NULL, NULL, CURDATE()),
+(10, 'ethereum scaling solution', NULL, NULL, CURDATE()),
+(11, 'meme token', NULL, NULL, CURDATE()),
+(12, 'smart contracts', NULL, NULL, CURDATE()),
+(13, 'digital entertainment', NULL, NULL, CURDATE()),
+(14, 'interoperability', NULL, NULL, CURDATE()),
+(15,'dApps', NULL, NULL, CURDATE()),
+(16, 'digital currency', NULL, NULL, CURDATE()),
+(17, 'digital currency', NULL, NULL, CURDATE()),
+(18, 'smart contracts', NULL, NULL, CURDATE()),
+(19, 'interoperability', NULL, NULL, CURDATE()),
+(20, 'digital payments', NULL, NULL, CURDATE()),
+(21, 'internet services', NULL, NULL, CURDATE()),
+(22, 'digital payments', NULL, NULL, CURDATE()),
+(23, 'financial infastructure', NULL, NULL, CURDATE()),
+(24, 'digital currency', NULL, NULL, CURDATE()),
+(25, 'smart contracts', NULL, NULL, CURDATE()),
+(26, 'dApps', NULL, NULL, CURDATE()),
+(27, 'smart contracts', NULL, NULL, CURDATE()),
+(28, 'digital currency', NULL, NULL, CURDATE()),
+(29, 'digital currency', NULL, NULL, CURDATE()),
+(30, 'asset tokenization', NULL, NULL, CURDATE()),
+(31, 'meme', NULL, NULL, CURDATE()),
+(32, 'dApps', NULL, NULL, CURDATE()),
+(33, 'governance', NULL, NULL, CURDATE());
 
 INSERT INTO Community (cryptocurrencyID, website, twitter, discord, reddit, whitepaper, is_open_source, repository_url) 
 VALUES 
@@ -159,7 +167,7 @@ VALUES
 (7, 'https://cardano.org/', 'https://twitter.com/cardano', NULL, 'https://www.reddit.com/r/cardano', 'https://docs.cardano.org/en/latest/', TRUE, 'https://github.com/input-output-hk'),
 (8, 'https://dogecoin.com/', 'https://twitter.com/dogecoin', NULL, 'https://www.reddit.com/r/dogecoin', 'https://foundation.dogecoin.com/about/', TRUE, 'https://github.com/dogecoin'),
 (9, 'https://chain.link/', 'https://twitter.com/chainlink', NULL, 'https://www.reddit.com/r/chainlink', 'https://research.chain.link/whitepaper-v2.pdf', TRUE, 'https://github.com/smartcontractkit'),
-(10, 'https://polygon.technology/', 'https://twitter.com/0xPolygon', 'https://discord.com/invite/XvpHAxZ', 'https://www.reddit.com/r/maticnetwork', 'https://polygon.technology/papers/pol-whitepaper', TRUE, 'https://github.com/maticnetwork'),
+(10, 'https://polygon.technology/', 'hSttps://twitter.com/0xPolygon', 'https://discord.com/invite/XvpHAxZ', 'https://www.reddit.com/r/maticnetwork', 'https://polygon.technology/papers/pol-whitepaper', TRUE, 'https://github.com/maticnetwork'),
 (11, 'https://shibatoken.com/', 'https://twitter.com/shibainucoin', 'https://discord.com/invite/shibatoken', 'https://www.reddit.com/r/SHIBArmy', 'https://uploads-ssl.webflow.com/6424006598e25f12a6360e93/6425c40b662f5690cb62e831_Ryoshi_Article.pdf', TRUE, 'https://github.com/shibaswaparmy'),
 (12, 'https://www.avax.network/', 'https://twitter.com/avax', 'https://discord.com/invite/RwXY7P6', 'https://www.reddit.com/r/Avax/', 'https://www.avalabs.org/whitepapers', TRUE, 'https://github.com/ava-labs'),
 (13, 'https://tron.network/', 'https://twitter.com/Tronfoundation', 'https://discord.com/invite/hqKvyAM', 'https://www.reddit.com/r/Tronix', 'https://tron.network/static/doc/white_paper_v_2_0.pdf', TRUE, 'https://github.com/tronprotocol'),
@@ -179,7 +187,10 @@ VALUES
 (27, 'https://near.org/', 'https://twitter.com/nearprotocol', 'https://discord.com/invite/zfhfRpaM4m', 'https://www.reddit.com/r/nearprotocol', 'https://near.org/papers/the-official-near-white-paper', TRUE, 'https://github.com/near'),
 (28, 'https://www.vechain.org/', 'https://twitter.com/vechainofficial', NULL, 'https://www.reddit.com/r/Vechain', 'https://www.vechain.org/whitepaper/', TRUE, 'https://github.com/vechain'),
 (29, 'https://bitcoinsv.com/', 'https://twitter.com/BitcoinSVNode', NULL, 'https://www.reddit.com/r/bitcoincashSV', 'https://www.bsvblockchain.org/about', TRUE, 'https://github.com/bitcoin-sv'),
-(30, 'https://ravencoin.org/', 'https://twitter.com/ravencoin', 'https://discord.com/invite/CqbfUZd', 'https://www.reddit.com/r/Ravencoin', 'https://ravencoin.org/assets/documents/Ravencoin.pdf', TRUE, 'https://github.com/RavenProject');
+(30, 'https://ravencoin.org/', 'https://twitter.com/ravencoin', 'https://discord.com/invite/CqbfUZd', 'https://www.reddit.com/r/Ravencoin', 'https://ravencoin.org/assets/documents/Ravencoin.pdf', TRUE, 'https://github.com/RavenProject'),
+(31, 'https://www.pepe.vip/', 'https://twitter.com/pepecoineth', NULL, NULL, 'https://www.allcryptowhitepapers.com/pepe-whitepaper/', NULL, NULL),
+(32, 'https://injective.com/', 'https://twitter.com/Injective_', 'https://discord.com/invite/NK4qdbv', NULL, 'https://docs.injective.network/learn/introduction', TRUE, 'https://github.com/InjectiveLabs'),
+(33, 'https://app.optimism.io/governance', 'https://twitter.com/optimismFND', 'https://discord.com/invite/optimism', NULL, 'https://community.optimism.io/', TRUE, 'https://github.com/ethereum-optimism');
 
 INSERT INTO ListedOn (cryptocurrencyID, exchangeID) 
 VALUES 
@@ -212,20 +223,26 @@ VALUES
 (27, 1), (27, 2), (27, 3), (27, 4), (27, 5), (27, 7), (27, 8), (27, 9),
 (28, 1), (28, 2), (28, 4), (28, 5), (28, 7), (28, 8),
 (29, 7), (29, 8), (29, 9),
-(30, 2), (30, 5), (30, 7), (30, 8), (30, 9);
-
+(30, 2), (30, 5), (30, 7), (30, 8), (30, 9),
+(31, 2), (31, 3), (31, 4), (31, 6), (31, 7), (31, 8), (31, 9),
+(32, 1), (32, 2), (32, 3), (32, 5), (32, 7), (32, 8), (32, 9), (32, 10),
+(33, 1), (33, 2), (33, 3), (33, 5), (33, 7), (33, 8), (33, 9);
 
 INSERT INTO Cryptocurrency_founder (founder, cryptocurrencyID) 
 VALUES 
 ('Satoshi Nakamoto', 1),
 ('Vitalik Buterin', 2),
 ('Gavin Wood', 2),
+('Charles Hoskinson', 2),
+('Anthony Di Lorio', 2),
+('Joseph Lubin', 2),
 ('Jed McCaleb', 3),
 ('Ryan Fugger', 3),
 ('Charlie Lee', 4),
 ('Changpeng Zhao', 5),
 ('Anatoly Yakovenko', 6),
 ('Charles Hoskinson', 7),
+('Jeremy Wood', 7),
 ('Billy Markus', 8),
 ('Jackson Palmer', 8),
 ('Sergey Nazarov', 9),
@@ -267,4 +284,10 @@ VALUES
 ('Jay Zhang', 28),
 ('Bitcoin Community', 29),
 ('Bruce Fenton', 30),
-('Tron Black', 30);
+('Tron Black', 30),
+('Unknown', 31),
+('Eric Chen', 32),
+('Albert Chon', 32),
+('Jinglan Wang', 33),
+('Karl Floersch', 33),
+('Kevin Ho', 33);
